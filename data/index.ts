@@ -75,3 +75,24 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+
+export const User = {
+  name: "Sonu Kumar",
+  role: "Full Stack Developer",
+  description:
+    "I'm a Full Stack Developer with a passion for building high-performance web applications. I specialize in React, Next.js, and Node.js.",
+  socialMedia: [
+    {
+      id: 1,
+      img: "/git.svg",
+    },
+    {
+      id: 2,
+      img: "/twit.svg",
+    },
+    {
+      id: 3,
+      img: "/link.svg",
+    },
+  ],
+};
