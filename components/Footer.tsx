@@ -2,7 +2,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { User } from "@/data";
 import MagicButton from "./MagicButton";
-import Link from "next/link";
 
 const Footer = () => {
   return (

@@ -6,7 +6,7 @@ import { HeroData } from "@/data";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <section id="about" className="pb-20 pt-36">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -69,7 +69,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
