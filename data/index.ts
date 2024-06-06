@@ -79,19 +79,23 @@ export const gridItems = [
 export const User = {
   name: "Sonu Kumar",
   role: "Full Stack Developer",
+  email: "sonu.patna0808@gmail.com",
   description:
     "I'm a Full Stack Developer with a passion for building high-performance web applications. I specialize in React, Next.js, and Node.js.",
   socialMedia: [
     {
       id: 1,
+      url: "https://github.com/0xsonu",
       img: "/git.svg",
     },
     {
       id: 2,
+      url: "https://twitter.com/0xsonuk",
       img: "/twit.svg",
     },
     {
       id: 3,
+      url: "https://linkedin.com/in/0xsonu",
       img: "/link.svg",
     },
   ],
