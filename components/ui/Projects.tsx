@@ -11,22 +11,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-interface IIcon {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-}
-
-interface IProject {
-  id: number;
-  title: string;
-  link: string;
-  img: string;
-  desc: string;
-  iconLists: IIcon[];
-}
+import { IProject } from "@/data";
 
 export const Projects = ({ projects }: { projects: IProject[] }) => {
   const firstRow = projects.slice(0, 4);

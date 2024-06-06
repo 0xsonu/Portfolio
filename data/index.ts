@@ -1,17 +1,68 @@
-export const navItems = [
+// interface for the data
+export interface IIcon {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface IProject {
+  id: number;
+  title: string;
+  link: string;
+  img: string;
+  desc: string;
+  iconLists: IIcon[];
+}
+
+export interface IUser {
+  name: string;
+  role: string;
+  email: string;
+  description: string;
+  socialMedia: {
+    id: number;
+    url: string;
+    img: string;
+  }[];
+}
+export interface IGridItem {
+  id: number;
+  title: string;
+  description: string;
+  className: string;
+  imgClassName: string;
+  titleClassName: string;
+  img: string;
+  spareImg: string;
+}
+export interface INavItem {
+  name: string;
+  link: string;
+}
+
+export interface IHeroData {
+  subTitle: string;
+  title: string;
+  description: string;
+}
+
+// data
+
+export const navItems: INavItem[] = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
-export const HeroData = {
+export const HeroData: IHeroData = {
   subTitle: "Delivering High-Performance Web Applications",
   title: "Designing Flawless User Experiences from Vision to Reality",
   description: `Hi there! I'm Sonu, a dedicated Full Stack Developer working out of Mumbai.`,
 };
 
-export const gridItems = [
+export const gridItems: IGridItem[] = [
   {
     id: 1,
     title:
@@ -76,7 +127,7 @@ export const gridItems = [
   },
 ];
 
-export const User = {
+export const User: IUser = {
   name: "Sonu Kumar",
   role: "Full Stack Developer",
   email: "sonu.patna0808@gmail.com",
@@ -101,7 +152,7 @@ export const User = {
   ],
 };
 
-export const projects = [
+export const projects: IProject[] = [
   {
     id: 1,
     title: "AI Image SaaS - Canva Application",
