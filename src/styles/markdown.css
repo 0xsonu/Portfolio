@@ -1,0 +1,205 @@
+/* Markdown and Code Highlighting Styles */
+.prose {
+  color: var(--foreground);
+  max-width: 65ch;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~="not-prose"] *)) {
+  color: var(--foreground);
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+  font-size: 2.25em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  font-size: 1.875em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
+  font-size: 1.5em;
+}
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.prose :where(a):hover:not(:where([class~="not-prose"] *)) {
+  color: var(--accent);
+}
+
+.prose :where(ul, ol):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.prose :where(li):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  color: var(--primary);
+  background-color: var(--muted);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.prose :where(pre):not(:where([class~="not-prose"] *)) {
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose :where(pre code):not(:where([class~="not-prose"] *)) {
+  background-color: transparent;
+  padding: 0;
+  color: var(--foreground);
+  font-size: 0.875em;
+  line-height: 1.7;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+  border-left: 4px solid var(--primary);
+  padding-left: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+
+.prose :where(strong):not(:where([class~="not-prose"] *)) {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.prose :where(table):not(:where([class~="not-prose"] *)) {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.prose :where(th):not(:where([class~="not-prose"] *)) {
+  background-color: var(--muted);
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+.prose :where(td):not(:where([class~="not-prose"] *)) {
+  padding: 0.75em;
+  border: 1px solid var(--border);
+}
+
+/* Code Syntax Highlighting */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: var(--neon-purple);
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: var(--neon-green);
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: var(--primary);
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: var(--primary);
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: var(--accent);
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: var(--neon-pink);
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: var(--primary);
+}
+
+.hljs-meta {
+  color: var(--muted-foreground);
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.hljs-addition {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
